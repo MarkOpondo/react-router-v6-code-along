@@ -1,12 +1,6 @@
-import NavBar from "../components/NavBar"
-
 export default function Login() {
     return (
         <>
-        <header>
-            {/* NavBar */}
-            <NavBar/>
-        </header>
         <main>
             <h1>Login</h1>
             <form>

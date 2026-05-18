@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "../components/NavBar";
 
 export default function UserProfile(){
     const [user, setUser] = useState({})
@@ -19,9 +18,6 @@ export default function UserProfile(){
 
     return(
         <>
-            <header>
-                <NavBar/>
-            </header>
             <main>
                 {user.name ? <h1>{user.name}</h1> : <h1>Loading...</h1>}
             </main>
