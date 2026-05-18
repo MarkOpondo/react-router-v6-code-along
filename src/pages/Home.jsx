@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Outlet } from "react-router-dom"
 import UserCard from "../components/UserCard"
 
 function Home() {
@@ -19,6 +20,7 @@ function Home() {
     <>
       <main>
         <h1>Home!</h1>
+        <Outlet/>
         {userList}
       </main>
     </>
