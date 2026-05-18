@@ -1,18 +1,12 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useOutletContext } from "react-router-dom";
 
 export default function UserProfile(){
-    const [user, setUser] = useState({})
 
     const params = useParams()
-    const userId = params.id
+    const users = useOutletContext()
 
-    useEffect(() => {
-        fetch(`http://localhost:4000/users/${userId}`)
-        .then(response => response.json())
-        .then(data => setUser(data))
-        .catch(error => console.error(error))
-    },[userId])
+    const user = users.find(user => user.id === parseInt(params.id)) 
 
     console.log(user);
 
